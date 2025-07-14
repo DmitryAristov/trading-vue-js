@@ -285,3 +285,24 @@ npm run auto-test
 5. Create a new Pull Request
 
 Please read the guidelines in CONTRIBUTING.md
+
+## Run several instance: 
+
+1. Change webpack/dev.config.js#6: 
+
+```
+global.port = '8082'
+```
+
+2. Change webpack/dev.config.js#46: add line:
+```
+port: 8082
+```
+
+## Extend memory:
+
+Add to npm run dev command:
+
+```
+  --max-old-space-size=4096 
+```
